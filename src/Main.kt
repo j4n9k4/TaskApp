@@ -23,5 +23,10 @@ fun main()
         it.durationInMinutes < 60
     }
 
-    println("You have ${shotEvents.size} short events")
+    val eventsGroupedByDayPart = events.groupBy {it.daypart}
+
+    eventsGroupedByDayPart.forEach{ daypart, eventsList ->
+        println("$daypart: ${eventsList.size}")
+    }
+
 }
