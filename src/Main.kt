@@ -29,4 +29,6 @@ fun main()
         println("$daypart: ${eventsList.size}")
     }
 
+    println("Last event of the day: ${events.last().title}")
+
 }
